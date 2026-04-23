@@ -34,7 +34,7 @@ variable "common_tags" {
 variable "boundary_version" {
   type        = string
   description = "Version of Boundary to install."
-  default     = "0.17.1+ent"
+  default     = "0.21.1+ent"
   validation {
     condition     = can(regex("^[0-9]+\\.[0-9]+\\.[0-9]+\\+ent$", var.boundary_version))
     error_message = "Value must be in the format 'X.Y.Z+ent'."

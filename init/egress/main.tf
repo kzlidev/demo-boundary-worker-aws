@@ -14,6 +14,7 @@ provider "aws" {
   region = var.region
 }
 
+
 module "boundary" {
   source = "../.."
 
@@ -34,7 +35,6 @@ module "boundary" {
   vpc_id                           = var.vpc_id
   worker_subnet_ids                = var.worker_subnet_ids
   create_lb                        = var.create_lb
-  lb_subnet_ids                    = var.lb_subnet_ids
   cidr_allow_ingress_boundary_9202 = var.cidr_allow_ingress_boundary_9202
   cidr_allow_ingress_ec2_ssh       = var.cidr_allow_ingress_ec2_ssh
 
